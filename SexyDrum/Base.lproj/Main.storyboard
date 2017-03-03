@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Work Space-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="WorkSpace" customModule="SexyDrum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sexy Drum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaz-QP-UKC">
+                                <rect key="frame" x="55" y="546" width="264" height="67"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="42"/>
+                                <color key="textColor" red="0.23064403779232834" green="0.17480026336591947" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Created by Kaoring Machine -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-Ne-jS4">
+                                <rect key="frame" x="60" y="604" width="255" height="67"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-Q9-8j4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZY-T0-awL">
+                                <rect key="frame" x="0.0" y="21" width="375" height="538"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tinko"/>
+                                <state key="highlighted" image="tinko"/>
+                                <connections>
+                                    <action selector="tappedButton:" destination="vXZ-lx-hvc" eventType="touchDown" id="CzI-gG-kiX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBT-jG-Fpj">
+                                <rect key="frame" x="285" y="179" width="90" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                <color key="backgroundColor" red="1" green="0.82352941176470584" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.82352941180000006" blue="0.15686274510000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSoundChangeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mfs-X8-eH8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrd-eg-k10">
+                                <rect key="frame" x="147" y="228" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGL-qx-Fq7">
+                                <rect key="frame" x="285" y="338" width="90" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="tappedSoundChangeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MIq-Bg-acb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n81-Yr-iqX">
+                                <rect key="frame" x="285" y="417" width="90" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="tappedSoundChangeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gQZ-Qw-bdZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f60-lQ-hSo">
+                                <rect key="frame" x="285" y="259" width="90" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="tappedSoundChangeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uj0-18-XAq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="voice" translatesAutoresizingMaskIntoConstraints="NO" id="Xjk-Fm-ier">
+                                <rect key="frame" x="358" y="417" width="18" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cymbal" translatesAutoresizingMaskIntoConstraints="NO" id="EnJ-c8-Za3">
+                                <rect key="frame" x="358" y="338" width="18" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clap" translatesAutoresizingMaskIntoConstraints="NO" id="doC-9p-bNR">
+                                <rect key="frame" x="358" y="259" width="18" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bell" translatesAutoresizingMaskIntoConstraints="NO" id="ji2-02-9uN">
+                                <rect key="frame" x="357" y="179" width="18" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bellThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="yaB-Ci-lNk">
+                                <rect key="frame" x="303" y="192" width="34" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clapThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-eq-zbT">
+                                <rect key="frame" x="300" y="270" width="41" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cymbalThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="WTC-ts-rdp">
+                                <rect key="frame" x="303" y="350" width="34" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="voiceThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="0CR-1j-UQG">
+                                <rect key="frame" x="302" y="430" width="37" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFA-Nr-0MW" userLabel="BalloonContainer">
+                                <rect key="frame" x="81" y="141" width="212" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="mRq-e2-qOk">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm feeling..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmT-Yg-6ix">
+                                        <rect key="frame" x="6" y="23" width="200" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87755505944525269" green="0.36041536269180929" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="balloonContainer" destination="QFA-Nr-0MW" id="bA1-lB-2qn"/>
+                        <outlet property="bellBtn" destination="RBT-jG-Fpj" id="VM6-Jx-syC"/>
+                        <outlet property="bellThumb" destination="yaB-Ci-lNk" id="3zn-pE-S1V"/>
+                        <outlet property="bellTitle" destination="ji2-02-9uN" id="QiM-3w-HTn"/>
+                        <outlet property="button" destination="JZY-T0-awL" id="uGA-RC-P7a"/>
+                        <outlet property="clapBtn" destination="f60-lQ-hSo" id="AyY-5h-PCg"/>
+                        <outlet property="clapThumb" destination="4gW-eq-zbT" id="ZHh-zB-fL1"/>
+                        <outlet property="clapTitle" destination="doC-9p-bNR" id="lPX-ay-Y0n"/>
+                        <outlet property="cymbalBtn" destination="AGL-qx-Fq7" id="JVz-UG-aT7"/>
+                        <outlet property="cymbalThumb" destination="WTC-ts-rdp" id="Cdd-WF-zGE"/>
+                        <outlet property="cymbalTitle" destination="EnJ-c8-Za3" id="emM-Y8-Bij"/>
+                        <outlet property="messageLabel" destination="SmT-Yg-6ix" id="djW-Xy-JTz"/>
+                        <outlet property="roundView" destination="jrd-eg-k10" id="s5K-MU-U4F"/>
+                        <outlet property="voiceBtn" destination="n81-Yr-iqX" id="DEs-hP-rdi"/>
+                        <outlet property="voiceThumb" destination="0CR-1j-UQG" id="eml-L2-Uet"/>
+                        <outlet property="voiceTitle" destination="Xjk-Fm-ier" id="3bs-16-Bvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="balloon" width="424" height="174"/>
+        <image name="bell" width="9" height="70"/>
+        <image name="bellThumbnail" width="68" height="76"/>
+        <image name="bg" width="375" height="667"/>
+        <image name="clap" width="9" height="70"/>
+        <image name="clapThumbnail" width="82" height="85"/>
+        <image name="cymbal" width="9" height="70"/>
+        <image name="cymbalThumbnail" width="69" height="83"/>
+        <image name="tinko" width="375" height="538"/>
+        <image name="voice" width="9" height="70"/>
+        <image name="voiceThumbnail" width="74" height="78"/>
+    </resources>
+</document>
