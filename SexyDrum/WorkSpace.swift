@@ -12,6 +12,7 @@ import AVFoundation
 class WorkSpace: CanvasController, AVAudioPlayerDelegate {
 
     var oscServer: F53OSCServer!
+    var oscClient: F53OSCClient!
     var audioPlayer : AVAudioPlayer!
     var petris = [Circle]()
     
@@ -45,6 +46,11 @@ class WorkSpace: CanvasController, AVAudioPlayerDelegate {
         oscServer = F53OSCServer.init()
         oscServer.port = 9999
         oscServer.delegate = self
+        
+        oscClient = F53OSCClient.init()
+        oscClient.host = "192.168.1.0"
+        oscClient.port = 8888
+        
         if oscServer.startListening() {
             print("Listening for messages on port \(oscServer.port)")
         } else {
@@ -53,7 +59,7 @@ class WorkSpace: CanvasController, AVAudioPlayerDelegate {
         
         
         // 再生する音源のURLを生成
-        let soundFilePath : String = Bundle.main.path(forResource: "Chin-Bell", ofType: "mp3")!
+        let soundFilePath : String = Bundle.main.path(forResource: "Ching", ofType: "wav")!
         let fileURL : URL = URL(fileURLWithPath: soundFilePath)
         
         
@@ -209,18 +215,19 @@ class WorkSpace: CanvasController, AVAudioPlayerDelegate {
         if (sender.tag == 100) {
             // Bell...
             soundFilePath = Bundle.main.path(forResource: "Ching", ofType: "wav")!
-            
-            
+            self.sendMessage(addressPattern: "/inst", arguments: [0 as AnyObject])
         } else if (sender.tag == 101) {
             // Clap...
             soundFilePath = Bundle.main.path(forResource: "Clap", ofType: "wav")!
+            self.sendMessage(addressPattern: "/inst", arguments: [1 as AnyObject])
         } else if (sender.tag == 102) {
             // Cymbal...
             soundFilePath = Bundle.main.path(forResource: "Cymbal", ofType: "wav")!
-            
+            self.sendMessage(addressPattern: "/inst", arguments: [2 as AnyObject])
         } else if (sender.tag == 103) {
             // Voice...
             soundFilePath = Bundle.main.path(forResource: "Vox", ofType: "wav")!
+            self.sendMessage(addressPattern: "/inst", arguments: [3 as AnyObject])
         }
         
         let fileURL : URL = URL(fileURLWithPath: soundFilePath)
@@ -248,7 +255,7 @@ class WorkSpace: CanvasController, AVAudioPlayerDelegate {
                     sender.backgroundColor = UIColor(red: 255.0 / 255.0, green: 210.0 / 255.0, blue: 40.0 / 255.0 , alpha: 1.0)
                     
                     self.selectedBtn.backgroundColor = UIColor.white
-                    
+
                     // Show thumnail
                     if (self.selectedBtn.tag == 100) {
                         // Bell
@@ -379,6 +386,11 @@ class WorkSpace: CanvasController, AVAudioPlayerDelegate {
             self.randomRotate(petri: petri)
         }
         anim.animate()
+    }
+    
+    func sendMessage(addressPattern: String, arguments: [AnyObject]) {
+        let message = F53OSCMessage(addressPattern: addressPattern, arguments: arguments)
+        oscClient.send(message)
     }
 }
 
